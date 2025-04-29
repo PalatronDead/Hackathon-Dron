@@ -1,0 +1,46 @@
+.air-quality-gauge {
+  padding: 2rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.air-quality-gauge h3 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+}
+
+.gauge-container {
+  margin-bottom: 1rem;
+}
+
+.gauge-background {
+  height: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.gauge-fill {
+  height: 100%;
+  transition: width 0.5s ease, background-color 0.5s ease;
+}
+
+.gauge-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.quality-indicator {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  transition: color 0.5s ease;
+} 
