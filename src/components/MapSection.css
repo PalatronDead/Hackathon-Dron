@@ -1,19 +1,42 @@
 .map-section {
-  padding: 5rem 5%;
-  background-color: #f5f7fa;
+  padding: 40px 20px;
+  background-color: #fff;
+}
+
+.map-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
 }
 
 .map-container {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 2rem;
-  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .map-wrapper {
-  border-radius: 10px;
+  flex: 1;
+  max-width: 800px;
+  border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.leaflet-container {
+  height: 500px;
+  width: 100%;
+}
+
+.leaflet-popup-content {
+  text-align: center;
+  padding: 10px;
+}
+
+.leaflet-popup-content p {
+  margin: 5px 0;
 }
 
 .air-quality-display {

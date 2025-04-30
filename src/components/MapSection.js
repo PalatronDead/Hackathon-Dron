@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMapEvents } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
-import AirQualityGauge from './AirQualityGauge';
+import ParticleList from './ParticleList';
 import './MapSection.css';
 
 const MapClickHandler = ({ onMapClick }) => {
@@ -15,14 +15,15 @@ const MapClickHandler = ({ onMapClick }) => {
 
 const MapSection = () => {
   const [selectedLocation, setSelectedLocation] = useState(null);
-  const [airQuality, setAirQuality] = useState(null);
+  const [selectedParticle, setSelectedParticle] = useState(null);
 
   const handleMapClick = (latlng) => {
     setSelectedLocation(latlng);
-    // Generate random air quality
-    const qualities = ['Good', 'Moderate', 'Bad', 'Very Bad'];
-    const randomQuality = qualities[Math.floor(Math.random() * qualities.length)];
-    setAirQuality(randomQuality);
+    setSelectedParticle(null);
+  };
+
+  const handleParticleSelect = (particle, value, quality) => {
+    setSelectedParticle({ name: particle, value, quality });
   };
 
   return (
@@ -43,21 +44,24 @@ const MapSection = () => {
             {selectedLocation && (
               <Marker position={selectedLocation}>
                 <Popup>
-                  Calidad del aire: {airQuality}
+                  {selectedParticle ? (
+                    <>
+                      {selectedParticle.name}: {selectedParticle.value}
+                      <br />
+                      Calidad: {selectedParticle.quality}
+                    </>
+                  ) : (
+                    'Selecciona una partícula para ver su valor'
+                  )}
                 </Popup>
               </Marker>
             )}
           </MapContainer>
         </div>
-        <div className="air-quality-display">
-          {airQuality ? (
-            <AirQualityGauge quality={airQuality} />
-          ) : (
-            <div className="no-selection">
-              <p>Haz click en cualquier parte del mapa para ver los datos de la calidad del aire</p>
-            </div>
-          )}
-        </div>
+        <ParticleList 
+          selectedLocation={selectedLocation}
+          onParticleSelect={handleParticleSelect}
+        />
       </div>
     </section>
   );
