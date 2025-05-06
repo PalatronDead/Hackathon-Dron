@@ -41,6 +41,17 @@
   color: #3498db;
 }
 
+.nav-links .social-icon {
+  font-size: 1.5rem;
+  margin-left: 1.5rem;
+  color: #2c3e50;
+  transition: color 0.3s ease;
+}
+
+.nav-links .social-icon:hover {
+  color: #3498db;
+}
+
 .hero {
   height: 100vh;
   display: flex;
@@ -177,10 +188,119 @@ h2 {
 }
 
 .footer {
-  text-align: center;
-  padding: 2rem;
+  text-align: left;
+  padding: 4rem 2rem 2rem;
   background-color: #2c3e50;
   color: white;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.footer-about h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #3498db;
+}
+
+.footer-about p {
+  line-height: 1.6;
+  color: #ecf0f1;
+  font-size: 0.95rem;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
+  color: #3498db;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-links a,
+.footer-contact a {
+  color: #ecf0f1;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.footer-links a:hover,
+.footer-contact a:hover {
+  color: #3498db;
+}
+
+.footer-social {
+  margin-top: 1.5rem;
+}
+
+.follow-text {
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+  color: #ecf0f1;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.social-icons a {
+  color: #ecf0f1;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  align-items: center;
+}
+
+.social-icons a:hover {
+  color: #3498db;
+  transform: translateY(-2px);
+}
+
+.footer-bottom {
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.copyright {
+  font-size: 0.9rem;
+  color: #bdc3c7;
+}
+
+.footer-legal {
+  font-size: 0.9rem;
+}
+
+.footer-legal a {
+  color: #bdc3c7;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-legal a:hover {
+  color: #3498db;
 }
 
 @media (max-width: 768px) {
@@ -194,5 +314,34 @@ h2 {
   
   section {
     padding: 3rem 5%;
+  }
+  
+  .nav-links .social-icon {
+    margin-left: 1rem;
+  }
+  
+  .footer {
+    padding: 3rem 1rem 1.5rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .footer-about,
+  .footer-links,
+  .footer-contact {
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
   }
 }

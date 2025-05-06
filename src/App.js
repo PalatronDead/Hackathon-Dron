@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import MapSection from './components/MapSection';
+import { FaFacebook, FaInstagram } from 'react-icons/fa';
 
 function App() {
   return (
@@ -12,6 +13,12 @@ function App() {
           <a href="#features">Caracteristicas</a>
           <a href="#map">Mapa de calidad del aire</a>
           <a href="#contact">Contactanos</a>
+          <a href="https://www.facebook.com/share/18xZgZKyTR/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="social-icon">
+            <FaFacebook />
+          </a>
+          <a href="https://www.instagram.com/somos_ziic?igsh=ZHBscmpvMXhpcmw%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" className="social-icon">
+            <FaInstagram />
+          </a>
         </div>
       </nav>
 
@@ -59,7 +66,48 @@ function App() {
       </section>
 
       <footer className="footer">
-        <p>&copy; 2025 ZIIC. Todos los derechos reservados.</p>
+        <div className="footer-content">
+          <div className="footer-grid">
+            <div className="footer-about">
+              <h3>ZIIC</h3>
+              <p>Proyecto innovador de monitoreo ambiental que combina tecnología de drones con sistemas avanzados para evaluar la calidad del aire en tiempo real en Hermosillo.</p>
+            </div>
+            
+            <div className="footer-links">
+              <h4>Navegación Rápida</h4>
+              <ul>
+                <li><a href="#about">Acerca de nosotros</a></li>
+                <li><a href="#features">Características</a></li>
+                <li><a href="#map">Mapa de calidad del aire</a></li>
+                <li><a href="#contact">Contáctanos</a></li>
+              </ul>
+            </div>
+
+            <div className="footer-contact">
+              <h4>Contacto</h4>
+              <p><a href="mailto:contactoziic@gmail.com">contactoziic@gmail.com</a></p>
+              <div className="footer-social">
+                <p className="follow-text">¡Síguenos!</p>
+                <div className="social-icons">
+                  <a href="https://www.facebook.com/share/18xZgZKyTR/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
+                    <FaFacebook />
+                  </a>
+                  <a href="https://www.instagram.com/somos_ziic?igsh=ZHBscmpvMXhpcmw%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
+                    <FaInstagram />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="footer-bottom">
+            <p className="copyright">&copy; 2025 ZIIC. Todos los derechos reservados.</p>
+            <p className="footer-legal">
+              <a href="#privacy">Política de Privacidad</a> | 
+              <a href="#terms"> Términos y Condiciones</a>
+            </p>
+          </div>
+        </div>
       </footer>
     </div>
   );
