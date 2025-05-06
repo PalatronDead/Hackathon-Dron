@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/Hackathon-Dron/static/css/main.1d70caf0.css",
-    "main.js": "/Hackathon-Dron/static/js/main.68b508ae.js",
+    "main.js": "/Hackathon-Dron/static/js/main.b750c6bc.js",
     "static/js/453.2e44b72a.chunk.js": "/Hackathon-Dron/static/js/453.2e44b72a.chunk.js",
     "static/media/backgroundHermosillo.jpeg": "/Hackathon-Dron/static/media/backgroundHermosillo.74b1bbf76fe239da2df8.jpeg",
     "index.html": "/Hackathon-Dron/index.html",
     "main.1d70caf0.css.map": "/Hackathon-Dron/static/css/main.1d70caf0.css.map",
-    "main.68b508ae.js.map": "/Hackathon-Dron/static/js/main.68b508ae.js.map",
+    "main.b750c6bc.js.map": "/Hackathon-Dron/static/js/main.b750c6bc.js.map",
     "453.2e44b72a.chunk.js.map": "/Hackathon-Dron/static/js/453.2e44b72a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1d70caf0.css",
-    "static/js/main.68b508ae.js"
+    "static/js/main.b750c6bc.js"
   ]
 }
