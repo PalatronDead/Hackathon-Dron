@@ -53,7 +53,9 @@ function App() {
         </div>
       </section>
 
-      <MapSection />
+      <section id="map">
+        <MapSection />
+      </section>
 
       <section id="contact" className="contact-section">
         <h2>Contactanos</h2>
